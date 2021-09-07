@@ -14,7 +14,7 @@ using WpfWithMVVM.Views;
 
 namespace WpfWithMVVM.ViewModels
 {
-   public class AppViewModel : INotifyPropertyChanged
+   public class AppViewModel : BaseViewModel
     {
 
         public FakeRepo PrinterRepository { get; set; }
@@ -38,7 +38,7 @@ namespace WpfWithMVVM.ViewModels
             {
                 Model="Envy",
                 Vendor="HP",
-                Color="AquaMarine123"
+                Color="Aqua"
             };
 
 
@@ -72,14 +72,6 @@ namespace WpfWithMVVM.ViewModels
         }
 
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged([CallerMemberName]string name=null)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(name));
-            }
-        }
+        
     }
 }

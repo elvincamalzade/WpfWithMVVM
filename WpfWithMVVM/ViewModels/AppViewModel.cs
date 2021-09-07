@@ -23,7 +23,7 @@ namespace WpfWithMVVM.ViewModels
         private Printer _printer;
         public Printer Printer { get {return _printer; } set {
                 _printer = value;
-                OnPropertyChanged();
+                OnPropertyChanged(); 
             } }
 
 
